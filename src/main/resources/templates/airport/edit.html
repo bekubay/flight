@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Edit Airport</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Edit Airport</h1>
+        <br />
+        <form action="#" th:action="@{/airport/edit}" th:object="${airport}"
+            method="post">
+ 
+            <table border="0" cellpadding="10">
+                 <tr>             
+                    <td>Airport COde:</td>
+                    <td>
+                        <input type="text" th:field="*{code}" />
+                    </td>
+                </tr>   
+                <tr>             
+                    <td>Airport Name</td>
+                    <td>
+                        <input type="text" th:field="*{name}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Airport City </td>
+                    <td><input type="text" th:field="*{city}" /></td>
+                </tr>
+                <tr>
+                    <td>Airport State</td>
+                    <td><input type=text th:field="*{sate}" /></td>
+                </tr>
+                                    
+                <tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
